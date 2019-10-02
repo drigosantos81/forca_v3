@@ -113,11 +113,11 @@ class Hangman:
         print('\nPalavra: ' + self.hide_word())
         print('\nLetras erradas: ', )
         for letter in self.missed_letters:
-            print(letter)
+            print(letter,)
         print()
-        print('Letras corretas: ', )
+        print('Letras corretas: ',)
         for letter in self.guessed_letters:
-            print(letter, )
+            print(letter,)
             print()
 
 
@@ -125,8 +125,7 @@ class Hangman:
 def rand_word():
     with open("palavras.txt", "rt") as f:
         bank = f.readlines()
-    return bank[random.randint(0, len(bank))].strip()
-
+    return bank[random.randint(0,len(bank))].strip()
 
 # Função Main - Execução do Programa
 def main():
